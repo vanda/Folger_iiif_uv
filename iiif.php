@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name:  Folger IIIF UV WP Plugin
+Plugin Name:  IIIF WP Plugin
 Plugin URI:   https://parsonstko.com/
 Description:  Plugin for embeding UV in Wordpress pages/posts.
 Version:      0.1.0
@@ -25,9 +25,9 @@ along with folger_iiif_uv. If not, see https://parsonstko.com/.
 
 defined("ABSPATH") or die("Nothing to see here.");
 
-class PTKO_folgerUVPlugin
+class IIIFPlugin
 {
-	private $uvClass;
+	private $IIIFClass;
 	private $admin;
 	private $pluginPath;
 	private $pluginFileSystemLocation;
@@ -65,14 +65,14 @@ class PTKO_folgerUVPlugin
 		return $this->admin;
     }
 
-    function setUVPluginClass($inClass)
+    function setIIIFPluginClass($inClass)
     {
-	    $this->uvClass = $inClass;
+	    $this->IIIFClass = $inClass;
     }
 
-	function getUVPluginClass()
+	function getIIIFPluginClass()
 	{
-		return $this->uvClass;
+		return $this->IIIFClass;
 	}
 
 	function setPluginPath($f = __FILE__)
@@ -98,20 +98,20 @@ class PTKO_folgerUVPlugin
     function __construct()
     {
 
-        require_once(__DIR__ . "/admin/ptkoFolgerIIIFUVAdmin.php");
-        require_once(__DIR__ . "/public/ptkoFolgerIIIFUV.php");
+        require_once(__DIR__ . "/admin/IIIFAdmin.php");
+        require_once(__DIR__ . "/public/IIIF.php");
 
 	    $this->setPluginPath(__FILE__);
 	    $this->setPluginFSPath(__FILE__);
 
-        $this->setUVPluginClass(new ptkoFolgerIIIFUV($this));
-        $this->setAdmin(new ptkoFolgerIIIFUVAdmin($this));
+        $this->setIIIFPluginClass(new IIIF($this));
+        $this->setAdmin(new IIIFAdmin($this));
 
         register_activation_hook(__FILE__, array($this, "activate"));
 
-        add_shortcode("miranda_uv", array($this->uvClass, "UVEmbedShortcode") );
+        add_shortcode("iiif_uv", array($this->IIIFClass, "UVEmbedShortcode") );
 
     }
 };
 
-$PTKO_folgerIIIFUVPlugin = new PTKO_folgerUVPlugin();
+$IIIFPlugin = new IIIFPlugin();
