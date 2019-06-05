@@ -1,23 +1,167 @@
 {
   "options": {
-    "dropEnabled": false,
+    "allowStealFocus": false,
+    "authAPIVersion": 1,
+    "bookmarkThumbHeight": 150,
+    "bookmarkThumbWidth": 90,
+    "dropEnabled": true,
     "footerPanelEnabled": true,
     "headerPanelEnabled": true,
-    "leftPanelEnabled": false,
+    "leftPanelEnabled": true,
     "limitLocales": false,
+    "multiSelectionMimeType": "application/zip",
+    "navigatorEnabled": true,
+    "openTemplate": "http://universalviewer.io?manifest={0}",
     "overrideFullScreen": false,
     "pagingEnabled": true,
-    "rightPanelEnabled": false
+    "pagingOptionEnabled": true,
+    "pessimisticAccessControl": false,
+    "preserveViewport": false,
+    "rightPanelEnabled": false,
+    "saveUserSettings": false,
+    "clickToZoomEnabled": true,
+    "searchWithinEnabled": true,
+    "termsOfUseEnabled": false,
+    "theme": "uv-en-GB-theme",
+    "tokenStorage": "session",
+    "useArrowKeysToNavigate": false,
+    "zoomToSearchResultEnabled": true
   },
   "modules": {
+    "contentLeftPanel": {
+      "options": {
+        "defaultToTreeEnabled": true,
+        "defaultToTreeIfGreaterThan": 0,
+        "elideCount": 40,
+        "expandFullEnabled": true,
+        "galleryThumbChunkedResizingThreshold": 400,
+        "galleryThumbHeight": 320,
+        "galleryThumbLoadPadding": 3,
+        "galleryThumbWidth": 200,
+        "oneColThumbHeight": 320,
+        "oneColThumbWidth": 200,
+        "pageModeEnabled": true,
+        "panelAnimationDuration": 250,
+        "panelCollapsedWidth": 30,
+        "panelExpandedWidth": 255,
+        "panelOpen": true,
+        "tabOrder": "",
+        "thumbsEnabled": true,
+        "thumbsExtraHeight": 8,
+        "thumbsImageFadeInDuration": 300,
+        "thumbsLoadRange": 15,
+        "treeEnabled": true,
+        "twoColThumbHeight": 150,
+        "twoColThumbWidth": 90
+      }
+    },
+    "dialogue": {
+      "topCloseButtonEnabled": false
+    },
+    "downloadDialogue": {
+      "options": {
+        "confinedImageSize": 1000,
+        "currentViewDisabledPercentage": 90,
+        "maxImageWidth": 5000,
+        "optionsExplanatoryTextEnabled": false,
+        "selectionEnabled": false
+      }
+    },
+    "footerPanel": {
+      "options":{
+        "bookmarkEnabled": false,
+        "downloadEnabled": false,
+        "embedEnabled": false,
+        "feedbackEnabled": false,
+        "fullscreenEnabled": true,
+        "minimiseButtons": false,
+        "moreInfoEnabled": false,
+        "openEnabled": false,
+        "printEnabled": false,
+        "shareEnabled": false
+      }
+    },
+    "genericDialogue": {
+    },
     "headerPanel": {
       "options": {
-        "localeToggleEnabled": false
+        "localeToggleEnabled": false,
+        "settingsButtonEnabled": false
+      }
+    },
+    "helpDialogue": {
+    },
+    "moreInfoRightPanel": {
+      "options": {
+        "canvasDisplayOrder": "",
+        "canvasExclude": "",
+        "copyToClipboardEnabled": false,
+        "manifestDisplayOrder": "",
+        "manifestExclude": "",
+        "panelAnimationDuration": 250,
+        "panelCollapsedWidth": 30,
+        "panelExpandedWidth": 255,
+        "panelOpen": false,
+        "rtlLanguageCodes": "ar, ara, dv, div, he, heb, ur, urd",
+        "showAllLanguages": false,
+        "textLimit": 4,
+        "textLimitType": "lines"
+      }
+    },
+    "multiSelectDialogue": {
+      "options": {
+        "galleryThumbChunkedResizingEnabled": true,
+        "galleryThumbChunkedResizingThreshold": 400,
+        "galleryThumbHeight": 320,
+        "galleryThumbLoadPadding": 3,
+        "galleryThumbWidth": 200,
+        "pageModeEnabled": true
+      }
+    },
+    "pagingHeaderPanel": {
+      "options": {
+        "autoCompleteBoxEnabled": false,
+        "galleryButtonEnabled": true,
+        "imageSelectionBoxEnabled": false,
+        "pageModeEnabled": false,
+        "pagingToggleEnabled": true
       }
     },
     "seadragonCenterPanel": {
       "options": {
-        "autoHideControls": false
+        "animationTime": 0.15,
+        "autoHideControls": true,
+        "attributionEnabled": true,
+        "blendTime": 0,
+        "constrainDuringPan": false,
+        "controlsFadeAfterInactive": 1500,
+        "controlsFadeDelay": 250,
+        "controlsFadeLength": 250,
+        "defaultZoomLevel": 0,
+        "immediateRender": false,
+        "maxZoomPixelRatio": 1.25,
+        "navigatorPosition": "BOTTOM_RIGHT",
+        "pageGap": 50,
+        "showHomeControl": false,
+        "trimAttributionCount": 150,
+        "visibilityRatio": 0.5
+      }
+    },
+    "searchFooterPanel": {
+      "options": {
+        "elideDetailsTermsCount": 20,
+        "elideResultsTermsCount": 10,
+        "pageModeEnabled": true,
+        "positionMarkerEnabled": true
+      }
+    },
+    "settingsDialogue": {
+    },
+    "shareDialogue": {
+      "options": {
+        "embedTemplate": "<iframe src=\"{0}\" width=\"{1}\" height=\"{2}\" allowfullscreen frameborder=\"0\"></iframe>",
+        "instructionsEnabled": false,
+        "shareFrameEnabled": true
       }
     }
   }
