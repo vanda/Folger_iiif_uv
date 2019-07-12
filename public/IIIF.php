@@ -61,8 +61,6 @@ class IIIF
 	function renderAssetType($input) {
 		$retVal .= $this->renderImages($input);
 
-		$retVal .= '<hr/></div>';
-
 		return $retVal;
 	}
 
