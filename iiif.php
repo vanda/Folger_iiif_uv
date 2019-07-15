@@ -3,7 +3,7 @@
 Plugin Name:  IIIF WP Plugin
 Plugin URI:   https://parsonstko.com/
 Description:  Plugin for embeding UV in Wordpress pages/posts.
-Version:      0.5.0
+Version:      0.5.1
 Author:       Krzysztof Sabat at ParsonsTKO (Modified by V&A)
 Author URI:   https://parsonstko.com/
 License:      GPL2
